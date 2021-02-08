@@ -247,6 +247,7 @@
   position: sticky;
   bottom: 50%;
   left: 90%;
+  background-color: transparent;
 }
 
 .scroll-container.hidden{
@@ -261,6 +262,7 @@
   flex-direction: column;
   width: 25px;
   height: 50px;
+  background-color: transparent;
 }
 
 .scroll-container__arrow span{
