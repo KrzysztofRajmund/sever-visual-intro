@@ -10,28 +10,32 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-.entrance-page__wrapper--animation {
-  text-align: center;
-  color: #f5f5f5;
-  font-weight: 900;
-  font-size: 14px;
-  letter-spacing: 1em;
-  text-transform: uppercase;
-  padding-right: 35px;
-}
-
-.entrance-page__wrapper--animation .letter {
-  display: inline-block;
-}
-
 .entrance-page {
-  text-align: center;
   font-family: 'Montserrat', sans-serif;
   font-size: 24px;
   height: 100vh;
   width: 100%;
   margin: 0;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+}
+
+.entrance-page:hover {
+  text-decoration: none;
+}
+
+.entrance-page__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,376 +49,29 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 1;
 }
 
-.entrance-page:hover {
-  text-decoration: none;
+.entrance-page__wrapper img {
+  width: auto;
+  height: 80vh;
+  padding: 50px 0px;
 }
 
-.entrance-page__wrapper h1 {
-  position: relative;
+.entrance-page__wrapper--animation {
   color: #f5f5f5;
-  font-size: 4em;
-  font-weight: 600;
-  letter-spacing: .5em;
-}
-
-.entrance-page__wrapper h1::before {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  left: 2px;
-  text-shadow: -2px 0 #ff00c1;
-  clip: rect(44px, 450px, 56px, 0);
-  animation: glitch-anim 5s infinite linear alternate-reverse;
-}
-
-.entrance-page__wrapper h1::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  left: -2px;
-  text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
-  animation: glitch-anim2 1s infinite linear alternate-reverse;
-}
-
-@-webkit-keyframes glitch-anim {
-  0% {
-    clip: rect(64px, 9999px, 50px, 0);
-    -webkit-transform: skew(0.78deg);
-            transform: skew(0.78deg);
-  }
-  6.66667% {
-    clip: rect(66px, 9999px, 7px, 0);
-    -webkit-transform: skew(0.84deg);
-            transform: skew(0.84deg);
-  }
-  13.33333% {
-    clip: rect(49px, 9999px, 72px, 0);
-    -webkit-transform: skew(0.77deg);
-            transform: skew(0.77deg);
-  }
-  20% {
-    clip: rect(1px, 9999px, 2px, 0);
-    -webkit-transform: skew(0.29deg);
-            transform: skew(0.29deg);
-  }
-  26.66667% {
-    clip: rect(95px, 9999px, 59px, 0);
-    -webkit-transform: skew(0.04deg);
-            transform: skew(0.04deg);
-  }
-  33.33333% {
-    clip: rect(2px, 9999px, 47px, 0);
-    -webkit-transform: skew(0.7deg);
-            transform: skew(0.7deg);
-  }
-  40% {
-    clip: rect(94px, 9999px, 41px, 0);
-    -webkit-transform: skew(0.43deg);
-            transform: skew(0.43deg);
-  }
-  46.66667% {
-    clip: rect(96px, 9999px, 98px, 0);
-    -webkit-transform: skew(0.16deg);
-            transform: skew(0.16deg);
-  }
-  53.33333% {
-    clip: rect(13px, 9999px, 47px, 0);
-    -webkit-transform: skew(0.75deg);
-            transform: skew(0.75deg);
-  }
-  60% {
-    clip: rect(2px, 9999px, 43px, 0);
-    -webkit-transform: skew(0.18deg);
-            transform: skew(0.18deg);
-  }
-  66.66667% {
-    clip: rect(64px, 9999px, 17px, 0);
-    -webkit-transform: skew(0.69deg);
-            transform: skew(0.69deg);
-  }
-  73.33333% {
-    clip: rect(87px, 9999px, 13px, 0);
-    -webkit-transform: skew(0.11deg);
-            transform: skew(0.11deg);
-  }
-  80% {
-    clip: rect(52px, 9999px, 44px, 0);
-    -webkit-transform: skew(0.6deg);
-            transform: skew(0.6deg);
-  }
-  86.66667% {
-    clip: rect(24px, 9999px, 9px, 0);
-    -webkit-transform: skew(0.75deg);
-            transform: skew(0.75deg);
-  }
-  93.33333% {
-    clip: rect(28px, 9999px, 68px, 0);
-    -webkit-transform: skew(0.7deg);
-            transform: skew(0.7deg);
-  }
-  100% {
-    clip: rect(91px, 9999px, 76px, 0);
-    -webkit-transform: skew(0.45deg);
-            transform: skew(0.45deg);
-  }
-}
-
-@keyframes glitch-anim {
-  0% {
-    clip: rect(64px, 9999px, 50px, 0);
-    -webkit-transform: skew(0.78deg);
-            transform: skew(0.78deg);
-  }
-  6.66667% {
-    clip: rect(66px, 9999px, 7px, 0);
-    -webkit-transform: skew(0.84deg);
-            transform: skew(0.84deg);
-  }
-  13.33333% {
-    clip: rect(49px, 9999px, 72px, 0);
-    -webkit-transform: skew(0.77deg);
-            transform: skew(0.77deg);
-  }
-  20% {
-    clip: rect(1px, 9999px, 2px, 0);
-    -webkit-transform: skew(0.29deg);
-            transform: skew(0.29deg);
-  }
-  26.66667% {
-    clip: rect(95px, 9999px, 59px, 0);
-    -webkit-transform: skew(0.04deg);
-            transform: skew(0.04deg);
-  }
-  33.33333% {
-    clip: rect(2px, 9999px, 47px, 0);
-    -webkit-transform: skew(0.7deg);
-            transform: skew(0.7deg);
-  }
-  40% {
-    clip: rect(94px, 9999px, 41px, 0);
-    -webkit-transform: skew(0.43deg);
-            transform: skew(0.43deg);
-  }
-  46.66667% {
-    clip: rect(96px, 9999px, 98px, 0);
-    -webkit-transform: skew(0.16deg);
-            transform: skew(0.16deg);
-  }
-  53.33333% {
-    clip: rect(13px, 9999px, 47px, 0);
-    -webkit-transform: skew(0.75deg);
-            transform: skew(0.75deg);
-  }
-  60% {
-    clip: rect(2px, 9999px, 43px, 0);
-    -webkit-transform: skew(0.18deg);
-            transform: skew(0.18deg);
-  }
-  66.66667% {
-    clip: rect(64px, 9999px, 17px, 0);
-    -webkit-transform: skew(0.69deg);
-            transform: skew(0.69deg);
-  }
-  73.33333% {
-    clip: rect(87px, 9999px, 13px, 0);
-    -webkit-transform: skew(0.11deg);
-            transform: skew(0.11deg);
-  }
-  80% {
-    clip: rect(52px, 9999px, 44px, 0);
-    -webkit-transform: skew(0.6deg);
-            transform: skew(0.6deg);
-  }
-  86.66667% {
-    clip: rect(24px, 9999px, 9px, 0);
-    -webkit-transform: skew(0.75deg);
-            transform: skew(0.75deg);
-  }
-  93.33333% {
-    clip: rect(28px, 9999px, 68px, 0);
-    -webkit-transform: skew(0.7deg);
-            transform: skew(0.7deg);
-  }
-  100% {
-    clip: rect(91px, 9999px, 76px, 0);
-    -webkit-transform: skew(0.45deg);
-            transform: skew(0.45deg);
-  }
-}
-
-@-webkit-keyframes glitch-anim2 {
-  0% {
-    clip: rect(93px, 9999px, 75px, 0);
-    -webkit-transform: skew(0.51deg);
-            transform: skew(0.51deg);
-  }
-  6.66667% {
-    clip: rect(59px, 9999px, 89px, 0);
-    -webkit-transform: skew(0.72deg);
-            transform: skew(0.72deg);
-  }
-  13.33333% {
-    clip: rect(46px, 9999px, 16px, 0);
-    -webkit-transform: skew(0.23deg);
-            transform: skew(0.23deg);
-  }
-  20% {
-    clip: rect(16px, 9999px, 13px, 0);
-    -webkit-transform: skew(0.65deg);
-            transform: skew(0.65deg);
-  }
-  26.66667% {
-    clip: rect(13px, 9999px, 39px, 0);
-    -webkit-transform: skew(0.67deg);
-            transform: skew(0.67deg);
-  }
-  33.33333% {
-    clip: rect(35px, 9999px, 64px, 0);
-    -webkit-transform: skew(0.67deg);
-            transform: skew(0.67deg);
-  }
-  40% {
-    clip: rect(98px, 9999px, 26px, 0);
-    -webkit-transform: skew(0.91deg);
-            transform: skew(0.91deg);
-  }
-  46.66667% {
-    clip: rect(17px, 9999px, 22px, 0);
-    -webkit-transform: skew(0.3deg);
-            transform: skew(0.3deg);
-  }
-  53.33333% {
-    clip: rect(93px, 9999px, 26px, 0);
-    -webkit-transform: skew(0.15deg);
-            transform: skew(0.15deg);
-  }
-  60% {
-    clip: rect(18px, 9999px, 82px, 0);
-    -webkit-transform: skew(0.89deg);
-            transform: skew(0.89deg);
-  }
-  66.66667% {
-    clip: rect(86px, 9999px, 33px, 0);
-    -webkit-transform: skew(0.26deg);
-            transform: skew(0.26deg);
-  }
-  73.33333% {
-    clip: rect(66px, 9999px, 75px, 0);
-    -webkit-transform: skew(0.48deg);
-            transform: skew(0.48deg);
-  }
-  80% {
-    clip: rect(44px, 9999px, 81px, 0);
-    -webkit-transform: skew(0.28deg);
-            transform: skew(0.28deg);
-  }
-  86.66667% {
-    clip: rect(97px, 9999px, 67px, 0);
-    -webkit-transform: skew(0.79deg);
-            transform: skew(0.79deg);
-  }
-  93.33333% {
-    clip: rect(37px, 9999px, 100px, 0);
-    -webkit-transform: skew(0.39deg);
-            transform: skew(0.39deg);
-  }
-  100% {
-    clip: rect(46px, 9999px, 44px, 0);
-    -webkit-transform: skew(0.42deg);
-            transform: skew(0.42deg);
-  }
-}
-
-@keyframes glitch-anim2 {
-  0% {
-    clip: rect(93px, 9999px, 75px, 0);
-    -webkit-transform: skew(0.51deg);
-            transform: skew(0.51deg);
-  }
-  6.66667% {
-    clip: rect(59px, 9999px, 89px, 0);
-    -webkit-transform: skew(0.72deg);
-            transform: skew(0.72deg);
-  }
-  13.33333% {
-    clip: rect(46px, 9999px, 16px, 0);
-    -webkit-transform: skew(0.23deg);
-            transform: skew(0.23deg);
-  }
-  20% {
-    clip: rect(16px, 9999px, 13px, 0);
-    -webkit-transform: skew(0.65deg);
-            transform: skew(0.65deg);
-  }
-  26.66667% {
-    clip: rect(13px, 9999px, 39px, 0);
-    -webkit-transform: skew(0.67deg);
-            transform: skew(0.67deg);
-  }
-  33.33333% {
-    clip: rect(35px, 9999px, 64px, 0);
-    -webkit-transform: skew(0.67deg);
-            transform: skew(0.67deg);
-  }
-  40% {
-    clip: rect(98px, 9999px, 26px, 0);
-    -webkit-transform: skew(0.91deg);
-            transform: skew(0.91deg);
-  }
-  46.66667% {
-    clip: rect(17px, 9999px, 22px, 0);
-    -webkit-transform: skew(0.3deg);
-            transform: skew(0.3deg);
-  }
-  53.33333% {
-    clip: rect(93px, 9999px, 26px, 0);
-    -webkit-transform: skew(0.15deg);
-            transform: skew(0.15deg);
-  }
-  60% {
-    clip: rect(18px, 9999px, 82px, 0);
-    -webkit-transform: skew(0.89deg);
-            transform: skew(0.89deg);
-  }
-  66.66667% {
-    clip: rect(86px, 9999px, 33px, 0);
-    -webkit-transform: skew(0.26deg);
-            transform: skew(0.26deg);
-  }
-  73.33333% {
-    clip: rect(66px, 9999px, 75px, 0);
-    -webkit-transform: skew(0.48deg);
-            transform: skew(0.48deg);
-  }
-  80% {
-    clip: rect(44px, 9999px, 81px, 0);
-    -webkit-transform: skew(0.28deg);
-            transform: skew(0.28deg);
-  }
-  86.66667% {
-    clip: rect(97px, 9999px, 67px, 0);
-    -webkit-transform: skew(0.79deg);
-            transform: skew(0.79deg);
-  }
-  93.33333% {
-    clip: rect(37px, 9999px, 100px, 0);
-    -webkit-transform: skew(0.39deg);
-            transform: skew(0.39deg);
-  }
-  100% {
-    clip: rect(46px, 9999px, 44px, 0);
-    -webkit-transform: skew(0.42deg);
-            transform: skew(0.42deg);
-  }
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: 1em;
+  text-transform: uppercase;
+  display: inline-block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding-left: 12px;
 }
 
 .footer-container {
@@ -425,6 +82,9 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: auto;
 }
@@ -514,17 +174,6 @@
   padding-top: 15px;
 }
 
-.nav-temporary {
-  padding: 15px 0px 0px 50px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.nav-temporary a {
-  cursor: pointer;
-}
-
 .about {
   text-align: center;
   display: -webkit-box;
@@ -566,8 +215,8 @@
   height: 50px;
   position: -webkit-sticky;
   position: sticky;
-  bottom: 50%;
-  left: 90%;
+  bottom: 10%;
+  left: 49%;
   background-color: transparent;
 }
 
@@ -641,6 +290,49 @@
   100% {
     -webkit-transform: translateY(0px) rotate(45deg);
             transform: translateY(0px) rotate(45deg);
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .about h2 {
+    width: 50%;
+  }
+  .about p {
+    width: 50%;
+  }
+  .entrance-page__wrapper img {
+    width: auto;
+    height: 80vh;
+    padding: 40px 0px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .footer-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer-container__card {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+  }
+  .footer-container__card a:first-child {
+    margin: 0px;
+  }
+  .footer-container__card .footer-bottom__title {
+    padding-top: 5px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .about h2 {
+    width: 70%;
+  }
+  .about p {
+    width: 70%;
   }
 }
 /*# sourceMappingURL=style.css.map */
