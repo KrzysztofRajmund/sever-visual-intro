@@ -7,6 +7,12 @@ import EntrancePage from './EntrancePage';
 import AboutUs from './../AboutUs/AboutUs';
 import ScrollButton from './ScrollButton';
 const SeverApp = () => {
+  const a = { b: 1, c: { d: 2 } };
+  const e = { ...a };
+
+  e.c.d = 3;
+
+  console.log(a.c.d);
   return (
     <Router>
       <Switch>
