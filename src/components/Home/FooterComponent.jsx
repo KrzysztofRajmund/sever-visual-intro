@@ -47,6 +47,8 @@ const FooterComponent = () => {
             <p>Contact</p>
             <p>
               <a href='tel:+44-778-420-81-79'>+44 778 420 81 79</a>
+            </p>
+            <p>
               <a href='tel:+44-744-690-14-44'>+44 744 690 14 44</a>
             </p>
             <p>
